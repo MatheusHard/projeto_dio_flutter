@@ -16,18 +16,47 @@ class _DrawerCustomState extends State<DrawerCustom> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children:
         [
-          UserAccountsDrawerHeader(
-            decoration: BoxDecoration(
-              color: Colors.black.withOpacity(0.3)
-            ),
-              currentAccountPicture:
-                        CircleAvatar(
-                          backgroundColor: Colors.white,
-                            child: Image.network(
-                                         "https://hermes.digitalinnovation.one/assets/diome/logo.png"
-                                    )),
-              accountName: const Text("Matheus Hardman"),
-              accountEmail: const Text("burumungu@gmail.com")),
+          InkWell(
+            onTap:(){
+              showModalBottomSheet(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)
+                ),
+                  context: context,
+                  builder: (BuildContext context){
+                    return  Wrap(
+                      children:  [
+                        ListTile(
+                          onTap: (){
+                            print("CAMERA");
+                          },
+                          title: const Text("CAmera"),
+                          leading: const Icon(Icons.camera),
+                        ),
+                        ListTile(
+                          onTap: (){
+                            print("GAleria");
+                          },
+                          title: const Text("GAleria"),
+                          leading: const Icon(Icons.browse_gallery),
+                        )
+                      ],
+                    );
+                  });
+            } ,
+            child: UserAccountsDrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.black.withOpacity(0.3)
+              ),
+                currentAccountPicture:
+                          CircleAvatar(
+                            backgroundColor: Colors.white,
+                              child: Image.network(
+                                           "https://hermes.digitalinnovation.one/assets/diome/logo.png"
+                                      )),
+                accountName: const Text("Matheus Hardman"),
+                accountEmail: const Text("burumungu@gmail.com")),
+          ),
           Container(
             width: double.infinity,
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
