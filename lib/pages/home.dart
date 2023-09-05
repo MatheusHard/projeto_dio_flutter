@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_dio_flutter/pages/card_detail_page.dart';
 import 'package:projeto_dio_flutter/pages/card_page.dart';
+import 'package:projeto_dio_flutter/pages/listview_h.dart';
 import 'package:projeto_dio_flutter/pages/page3.dart';
 import 'package:projeto_dio_flutter/pages/shared/widgets/drawer.dart';
 import 'package:projeto_dio_flutter/pages/usuario.dart';
@@ -35,7 +36,7 @@ class _HomeState extends State<Home> {
                 children:const [
                   CardPage(),
                   UsuarioPage(),
-                  Page3()
+                  ListViewH()
                 ]),
             ),
             BottomNavigationBar(
@@ -46,7 +47,7 @@ class _HomeState extends State<Home> {
                 items: const [
                   BottomNavigationBarItem( label: "Card", icon: Icon(Icons.card_giftcard)),
                   BottomNavigationBarItem( label: "Usuario", icon: Icon(Icons.supervised_user_circle_outlined)),
-                  BottomNavigationBarItem( label: "Page", icon: Icon(Icons.add))
+                  BottomNavigationBarItem( label: "ListView", icon: Icon(Icons.list))
 
                 ],
             ),
