@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_dio_flutter/pages/card_detail_page.dart';
 import 'package:projeto_dio_flutter/pages/card_page.dart';
-import 'package:projeto_dio_flutter/pages/listview_h.dart';
+import 'package:projeto_dio_flutter/pages/listview_horizontal.dart';
+import 'package:projeto_dio_flutter/pages/listview_vertical.dart';
 import 'package:projeto_dio_flutter/pages/page3.dart';
 import 'package:projeto_dio_flutter/pages/shared/widgets/drawer.dart';
 import 'package:projeto_dio_flutter/pages/usuario.dart';
@@ -36,10 +37,12 @@ class _HomeState extends State<Home> {
                 children:const [
                   CardPage(),
                   UsuarioPage(),
-                  ListViewH()
+                  ListViewVertical(),
+                  ListViewHorizontal()
                 ]),
             ),
             BottomNavigationBar(
+              type: BottomNavigationBarType.fixed,
               onTap: (value){
                 controller.jumpToPage(value);
               },
@@ -47,7 +50,9 @@ class _HomeState extends State<Home> {
                 items: const [
                   BottomNavigationBarItem( label: "Card", icon: Icon(Icons.card_giftcard)),
                   BottomNavigationBarItem( label: "Usuario", icon: Icon(Icons.supervised_user_circle_outlined)),
-                  BottomNavigationBarItem( label: "ListView", icon: Icon(Icons.list))
+                  BottomNavigationBarItem( label: "ListView Vertical", icon: Icon(Icons.list)),
+                  BottomNavigationBarItem( label: "ListView Horizontal", icon: Icon(Icons.list))
+
 
                 ],
             ),
