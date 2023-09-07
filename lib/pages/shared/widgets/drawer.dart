@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'package:projeto_dio_flutter/pages/configuracoes.dart';
+import 'package:projeto_dio_flutter/pages/random_page.dart';
 
 class DrawerCustom extends StatefulWidget {
   const DrawerCustom({super.key});
@@ -78,14 +80,30 @@ class _DrawerCustomState extends State<DrawerCustom> {
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
             child: InkWell(
               onTap: (){
-                print("CONFIGURAÇÕES");
-              },
+                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (BuildContext bd)=> const ConfiguracoesPage()));              },
               child: Row(
                       children:  const[
-                      Icon(Icons.menu),
+                      Icon(Icons.security_update),
                       SizedBox(width: 20),
                       Text("CONFIGURAÇÕES"),
                       ],)
+            ),
+          ),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            child: InkWell(
+                onTap: (){
+                  Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext bd)=> const RandomPage()));
+                },
+                child: Row(
+                  children:  const[
+                    Icon(Icons.menu),
+                    SizedBox(width: 20),
+                    Text("RANDOM"),
+                  ],)
             ),
           )
         ],
