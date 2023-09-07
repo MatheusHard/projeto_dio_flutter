@@ -105,9 +105,60 @@ class _DrawerCustomState extends State<DrawerCustom> {
                     Text("RANDOM"),
                   ],)
             ),
-          )
+          ),
+          const Divider(),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            child: InkWell(
+                onTap: (){
+                  _alertSair();
+                },
+                child: Row(
+                  children:  const[
+                    Icon(Icons.exit_to_app_rounded),
+                    SizedBox(width: 20),
+                    Text("SAIR"),
+                  ],)
+            ),
+          ),
+
         ],
       ),
     );
+  }
+  _alertSair(){
+
+    showDialog(context: context, builder: (BuildContext context){
+      return AlertDialog(
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10)
+        ),
+        alignment: Alignment.centerLeft,
+        elevation: 8,
+        title: const Text("APP"),
+        content: Wrap(
+          children: const [
+            Text("Deseja Sair!"),
+            Text("Deseja realmente sair?")
+          ],
+        ),
+        actions: [
+          TextButton(
+              onPressed: (){
+                // Navigator.pushReplacement(
+                //context,
+                //  MaterialPageRoute(builder: (context)=> const Logi))
+                print("SAINDOOOOO");
+              }, child: const Text("SIM")),
+          TextButton(
+              onPressed: (){
+                Navigator.of(context).pop();
+              },
+              child: const Text("NÃO"))
+        ],
+      );
+    });
+
   }
 }
