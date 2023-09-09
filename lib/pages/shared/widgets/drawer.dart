@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:projeto_dio_flutter/pages/configuracoes.dart';
+import 'package:projeto_dio_flutter/pages/hive/random_page_hive.dart';
 import 'package:projeto_dio_flutter/pages/random_page.dart';
 
 class DrawerCustom extends StatefulWidget {
@@ -103,6 +104,22 @@ class _DrawerCustomState extends State<DrawerCustom> {
                     Icon(Icons.menu),
                     SizedBox(width: 20),
                     Text("RANDOM"),
+                  ],)
+            ),
+          ),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            child: InkWell(
+                onTap: (){
+                  Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext bd)=> const RandomPageHive()));
+                },
+                child: Row(
+                  children:  const[
+                    Icon(Icons.menu),
+                    SizedBox(width: 20),
+                    Text("RANDOM HIVE"),
                   ],)
             ),
           ),
