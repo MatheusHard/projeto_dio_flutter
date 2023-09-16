@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:projeto_dio_flutter/pages/configuracoes.dart';
+import 'package:projeto_dio_flutter/pages/hive/configuracoes_page_hive.dart';
 import 'package:projeto_dio_flutter/pages/hive/random_page_hive.dart';
 import 'package:projeto_dio_flutter/pages/random_page.dart';
 
@@ -89,6 +90,22 @@ class _DrawerCustomState extends State<DrawerCustom> {
                       SizedBox(width: 20),
                       Text("CONFIGURAÇÕES"),
                       ],)
+            ),
+          ),
+          ///Config Hive
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            child: InkWell(
+                onTap: (){
+                  Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext bd)=> const ConfiguracoesHivePage()));              },
+                child: Row(
+                  children:  const[
+                    Icon(Icons.security_update),
+                    SizedBox(width: 20),
+                    Text("CONFIGURAÇÕES HIVE"),
+                  ],)
             ),
           ),
           Container(

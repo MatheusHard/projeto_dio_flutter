@@ -85,11 +85,11 @@ class _ConfiguracoesHivePageState extends State<ConfiguracoesHivePage> {
                 onPressed: () async {
                   FocusManager.instance.primaryFocus?.unfocus();
                   try{
-                    await  configuracoesModel.altura = double.parse(alturaController.text);
+                     configuracoesModel.altura = double.parse(alturaController.text);
                   }catch(e){
                     showDialog(context: context , builder: (_){
                       return AlertDialog(
-                        title: const Text("ERR"),
+                        title: const Text("ERRO"),
                         actions: [
                           TextButton(onPressed: (){
                             Navigator.pop(context);
@@ -104,11 +104,10 @@ class _ConfiguracoesHivePageState extends State<ConfiguracoesHivePage> {
                     });
                     return;
                   }
-                  await storage.setString(KEY_USUARIO, nameUserController.text);
-                  await storage.setBool(KEY_MODO_ESCURO, temaEscuro);
-                  await storage.setBool(KEY_NOTIFICACOES, receberNOtification);
+                  configuracoesModel.nomeUsuario =  nameUserController.text;
 
-                  if(mounted) {
+                  configuracoesRepositoryHive.salvar(configuracoesModel);
+                   if(mounted) {
                     Navigator.pop(context);
                   }
 
