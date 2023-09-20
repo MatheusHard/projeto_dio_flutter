@@ -4,14 +4,17 @@ import 'package:projeto_dio_flutter/pages/sqflitte/database_sqflitte.dart';
 
 class TarefaRepository{
 
-  Future<List<TarefaModel>> lista () async {
+  Future<List<TarefaModel>> obrterDados (bool naoConcluidos) async {
 
     List<TarefaModel> tarefas = [];
     var db = await DataBaseSqFlitte().obterDatabase();
-    var result = await db.rawQuery("SELECT id, descricao, concluido FROM tarefas");
+    var result = await db.rawQuery(
+        naoConcluidos ?
+        "SELECT id, descricao, cloncluido FROM tarefas WHERE cloncluido = 0 ":
+        "SELECT id, descricao, cloncluido FROM tarefas");
     for(var item in result){
       tarefas.add(TarefaModel(int.parse(item["id"].toString()),
-                              item["concluido"].toString() == 1,
+                              item["cloncluido"].toString() == 1,
                               item["descricao"].toString(),
                               ));
     }
@@ -19,13 +22,13 @@ class TarefaRepository{
   }
   Future<void> salvar(TarefaModel model) async{
     var db = await DataBaseSqFlitte().obterDatabase();
-    await db.rawInsert("INSERT INTO tarefas (descricao, concluido) values (?,?)",
+    await db.rawInsert("INSERT INTO tarefas (descricao, cloncluido) values (?,?)",
     [model.descricao, model.concluido]);
 
   }
   Future<void> atualizar(TarefaModel model) async{
     var db = await DataBaseSqFlitte().obterDatabase();
-    await db.rawUpdate("UPDATE tarefas  set descricao = ?, concluido = ? WHERE id = ? ",
+    await db.rawUpdate("UPDATE tarefas  set descricao = ?, cloncluido = ? WHERE id = ? ",
         [model.descricao, model.concluido, model.id]);
 
   }
