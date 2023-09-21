@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:projeto_dio_flutter/pages/cep_page.dart';
 import 'package:projeto_dio_flutter/pages/configuracoes.dart';
 import 'package:projeto_dio_flutter/pages/hive/configuracoes_page_hive.dart';
 import 'package:projeto_dio_flutter/pages/hive/random_page_hive.dart';
@@ -154,6 +155,22 @@ class _DrawerCustomState extends State<DrawerCustom> {
                     Icon(Icons.menu),
                     SizedBox(width: 20),
                     Text("TAREFAS"),
+                  ],)
+            ),
+          ),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            child: InkWell(
+                onTap: (){
+                  Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext bd)=> const CepPage()));
+                },
+                child: Row(
+                  children:  const[
+                    Icon(Icons.post_add),
+                    SizedBox(width: 20),
+                    Text("BUSCA CEP"),
                   ],)
             ),
           ),
