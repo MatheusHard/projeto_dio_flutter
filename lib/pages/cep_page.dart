@@ -1,8 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:projeto_dio_flutter/apis/cep_api.dart';
-import 'package:projeto_dio_flutter/apis/placeholder_api.dart';
+import 'package:projeto_dio_flutter/apis/dio/interfaces_api/i_post_api.dart';
+import 'package:projeto_dio_flutter/apis/dio/post_dio_api.dart';
+import 'package:projeto_dio_flutter/apis/http/cep_http_api.dart';
+import 'package:projeto_dio_flutter/apis/http/post_http_api.dart';
 import 'package:projeto_dio_flutter/model/cep_model.dart';
 
 class CepPage extends StatefulWidget {
@@ -21,8 +23,8 @@ class _CepPageState extends State<CepPage> {
   var cidade = "";
   var uf = "";
   var cepModel = CepModel();
-  var cepApi =  CepApi();
-  var placeHolderApi = PlaceHolderApi();
+  var cepApi =  CepHttpApi();
+  IPostDioApi postDioApi = PostDioApi();
 
 
   @override
@@ -52,7 +54,7 @@ class _CepPageState extends State<CepPage> {
 
                  cepModel = await cepApi.getByCep(cep);
                  ///TESTES
-                  var lista = await placeHolderApi.getAll();
+                  var lista = await postDioApi.getAll();
                   print(lista);
 
                 }
