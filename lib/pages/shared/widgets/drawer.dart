@@ -1,11 +1,13 @@
 
 import 'package:flutter/material.dart';
+import 'package:projeto_dio_flutter/apis/dio/tarefas_back4app_api.dart';
 import 'package:projeto_dio_flutter/pages/cep_page.dart';
 import 'package:projeto_dio_flutter/pages/configuracoes.dart';
 import 'package:projeto_dio_flutter/pages/hive/configuracoes_page_hive.dart';
 import 'package:projeto_dio_flutter/pages/hive/random_page_hive.dart';
 import 'package:projeto_dio_flutter/pages/marvel_page.dart';
 import 'package:projeto_dio_flutter/pages/random_page.dart';
+import 'package:projeto_dio_flutter/pages/tarefa_back4app_page.dart';
 import 'package:projeto_dio_flutter/pages/tarefa_sqlite_page.dart';
 
 class DrawerCustom extends StatefulWidget {
@@ -19,8 +21,7 @@ class _DrawerCustomState extends State<DrawerCustom> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: ListView(
         children:
         [
           InkWell(
@@ -188,6 +189,22 @@ class _DrawerCustomState extends State<DrawerCustom> {
                     Icon(Icons.post_add),
                     SizedBox(width: 20),
                     Text("MARVEL"),
+                  ],)
+            ),
+          ),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            child: InkWell(
+                onTap: () async{
+                  Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext bd)=> const TarefaBack4App()));
+                },
+                child: Row(
+                  children:  const[
+                    Icon(Icons.post_add),
+                    SizedBox(width: 20),
+                    Text("TAREFAS BACK4APP"),
                   ],)
             ),
           ),
