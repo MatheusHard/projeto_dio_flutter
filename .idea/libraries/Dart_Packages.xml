@@ -2,10 +2,24 @@
   <library name="Dart Packages" type="DartPackagesLibraryType">
     <properties>
       <option name="packageNameToDirsMap">
+        <entry key="animated_text_kit">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/animated_text_kit-4.2.2/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="async">
           <value>
             <list>
               <option value="$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.9.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="auto_size_text">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/auto_size_text-3.0.0/lib" />
             </list>
           </value>
         </entry>
@@ -121,6 +135,13 @@
             </list>
           </value>
         </entry>
+        <entry key="font_awesome_flutter">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-10.4.0/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="hive">
           <value>
             <list>
@@ -223,6 +244,13 @@
           <value>
             <list>
               <option value="$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.2.0/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="percent_indicator">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/percent_indicator-4.2.3/lib" />
             </list>
           </value>
         </entry>
@@ -390,7 +418,9 @@
       </option>
     </properties>
     <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/animated_text_kit-4.2.2/lib" />
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.9.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/auto_size_text-3.0.0/lib" />
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/boolean_selector-2.1.0/lib" />
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/characters-1.2.1/lib" />
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/clock-1.1.1/lib" />
@@ -404,6 +434,7 @@
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/file-6.1.4/lib" />
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_dotenv-5.1.0/lib" />
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-2.0.2/lib" />
+      <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-10.4.0/lib" />
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/hive-2.2.3/lib" />
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.13.5/lib" />
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.2/lib" />
@@ -419,6 +450,7 @@
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.2.0/lib" />
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_platform_interface-2.1.0/lib" />
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.2.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/percent_indicator-4.2.3/lib" />
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/platform-3.1.1/lib" />
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.1.5/lib" />
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-2.2.0/lib" />

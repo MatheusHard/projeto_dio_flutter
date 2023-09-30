@@ -1,12 +1,16 @@
 
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:projeto_dio_flutter/apis/dio/tarefas_back4app_api.dart';
+import 'package:projeto_dio_flutter/pages/auto_size_page.dart';
 import 'package:projeto_dio_flutter/pages/cep_page.dart';
 import 'package:projeto_dio_flutter/pages/configuracoes.dart';
 import 'package:projeto_dio_flutter/pages/hive/configuracoes_page_hive.dart';
 import 'package:projeto_dio_flutter/pages/hive/random_page_hive.dart';
 import 'package:projeto_dio_flutter/pages/marvel_page.dart';
+import 'package:projeto_dio_flutter/pages/percentage_page.dart';
 import 'package:projeto_dio_flutter/pages/random_page.dart';
+import 'package:projeto_dio_flutter/pages/splash_01.dart';
 import 'package:projeto_dio_flutter/pages/tarefa_back4app_page.dart';
 import 'package:projeto_dio_flutter/pages/tarefa_sqlite_page.dart';
 
@@ -205,6 +209,54 @@ class _DrawerCustomState extends State<DrawerCustom> {
                     Icon(Icons.post_add),
                     SizedBox(width: 20),
                     Text("TAREFAS BACK4APP"),
+                  ],)
+            ),
+          ),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            child: InkWell(
+                onTap: () async{
+                  Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext bd)=> const PercentagePage()));
+                },
+                child: Row(
+                  children:  const[
+                    FaIcon(FontAwesomeIcons.percent),
+                    SizedBox(width: 20),
+                    Text("PERCENTAGE"),
+                  ],)
+            ),
+          ),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            child: InkWell(
+                onTap: () async{
+                  Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext bd)=> const AutoSizePage()));
+                },
+                child: Row(
+                  children:  const[
+                    FaIcon(FontAwesomeIcons.textWidth),
+                    SizedBox(width: 20),
+                    Text("AUT SIZE TEXT"),
+                  ],)
+            ),
+          ),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            child: InkWell(
+                onTap: () async{
+                  Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext bd)=> const Splash01()));
+                },
+                child: Row(
+                  children:  const[
+                    FaIcon(FontAwesomeIcons.unsplash),
+                    SizedBox(width: 20),
+                    Text("SPLASH"),
                   ],)
             ),
           ),
