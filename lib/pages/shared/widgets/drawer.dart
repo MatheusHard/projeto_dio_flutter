@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:projeto_dio_flutter/apis/dio/tarefas_back4app_api.dart';
 import 'package:projeto_dio_flutter/pages/auto_size_page.dart';
+import 'package:projeto_dio_flutter/pages/brasil_fields_page.dart';
 import 'package:projeto_dio_flutter/pages/cep_page.dart';
 import 'package:projeto_dio_flutter/pages/configuracoes.dart';
 import 'package:projeto_dio_flutter/pages/hive/configuracoes_page_hive.dart';
@@ -257,6 +258,22 @@ class _DrawerCustomState extends State<DrawerCustom> {
                     FaIcon(FontAwesomeIcons.unsplash),
                     SizedBox(width: 20),
                     Text("SPLASH"),
+                  ],)
+            ),
+          ),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            child: InkWell(
+                onTap: () async{
+                  Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext bd)=> const BrasilFieldsPage()));
+                },
+                child: Row(
+                  children:  const[
+                    FaIcon(FontAwesomeIcons.unsplash),
+                    SizedBox(width: 20),
+                    Text("BRASIL FIELDS"),
                   ],)
             ),
           ),
