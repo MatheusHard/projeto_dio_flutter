@@ -1,11 +1,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:projeto_dio_flutter/apis/dio/tarefas_back4app_api.dart';
+import 'package:package_info_plus/package_info_plus.dart';
+import 'package:path_provider/path_provider.dart' as path_provider;
 import 'package:projeto_dio_flutter/pages/auto_size_page.dart';
 import 'package:projeto_dio_flutter/pages/brasil_fields_page.dart';
 import 'package:projeto_dio_flutter/pages/cep_page.dart';
 import 'package:projeto_dio_flutter/pages/configuracoes.dart';
+import 'package:projeto_dio_flutter/pages/hardware_page.dart';
 import 'package:projeto_dio_flutter/pages/hive/configuracoes_page_hive.dart';
 import 'package:projeto_dio_flutter/pages/hive/random_page_hive.dart';
 import 'package:projeto_dio_flutter/pages/marvel_page.dart';
@@ -14,6 +16,9 @@ import 'package:projeto_dio_flutter/pages/random_page.dart';
 import 'package:projeto_dio_flutter/pages/splash_01.dart';
 import 'package:projeto_dio_flutter/pages/tarefa_back4app_page.dart';
 import 'package:projeto_dio_flutter/pages/tarefa_sqlite_page.dart';
+//import 'package:share_plus/share_plus.dart';
+
+import '../../bateria_page.dart';
 
 class DrawerCustom extends StatefulWidget {
   const DrawerCustom({super.key});
@@ -277,7 +282,77 @@ class _DrawerCustomState extends State<DrawerCustom> {
                   ],)
             ),
           ),
-          const Divider(),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            child: InkWell(
+                onTap: () async{
+                  Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext bd)=> const BateriaPage()));
+                },
+                child: Row(
+                  children:  const[
+                    FaIcon(FontAwesomeIcons.batteryHalf),
+                    SizedBox(width: 20),
+                    Text("BATERIA"),
+                  ],)
+            ),
+          ),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            child: InkWell(
+                onTap: () async{
+                 var directory = await path_provider.getTemporaryDirectory() ;
+                 print(directory);
+                 directory = await path_provider.getApplicationSupportDirectory();
+                 print(directory);
+                 directory = await path_provider.getApplicationDocumentsDirectory();
+                 print(directory);
+                },
+                child: Row(
+                  children:  const[
+                    FaIcon(FontAwesomeIcons.paste),
+                    SizedBox(width: 20),
+                    Text("PATH  PROVIDER"),
+                  ],)
+            ),
+          ),
+                  Container(
+                  width: double.infinity,
+                  padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+                  child: InkWell(
+                  onTap: () {
+                  //Share.share('check out my website https://globo.com');
+
+                  },
+                  child: Row(
+                  children:  const[
+                  FaIcon(FontAwesomeIcons.share),
+                  SizedBox(width: 20),
+                  Text("COMPARTIlHAR"),
+                  ],)
+                  ),
+                  ),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            child: InkWell(
+                onTap: () async{
+                  Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext bd)=> const HardwarePage()));
+
+                },
+                child: Row(
+                  children:  const[
+                    FaIcon(FontAwesomeIcons.hardDrive),
+                    SizedBox(width: 20),
+                    Text("DADOS HARDWARE"),
+                  ],)
+            ),
+          ),
+
+    const Divider(),
           Container(
             width: double.infinity,
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
