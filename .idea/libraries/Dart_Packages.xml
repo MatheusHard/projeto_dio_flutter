@@ -401,6 +401,13 @@
             </list>
           </value>
         </entry>
+        <entry key="qr_code_scanner">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/qr_code_scanner-1.0.1/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="shared_preferences">
           <value>
             <list>
@@ -619,6 +626,7 @@
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/petitparser-5.1.0/lib" />
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/platform-3.1.1/lib" />
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.1.5/lib" />
+      <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/qr_code_scanner-1.0.1/lib" />
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-2.2.0/lib" />
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_android-2.2.0/lib" />
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_foundation-2.3.3/lib" />
