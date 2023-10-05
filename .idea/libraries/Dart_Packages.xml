@@ -58,6 +58,13 @@
             </list>
           </value>
         </entry>
+        <entry key="convex_bottom_bar">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/convex_bottom_bar-3.2.0/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="crypto">
           <value>
             <list>
@@ -426,6 +433,7 @@
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/clock-1.1.1/lib" />
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.16.0/lib" />
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/convert-3.1.1/lib" />
+      <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/convex_bottom_bar-3.2.0/lib" />
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-3.0.2/lib" />
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.5/lib" />
       <root url="file://$PROJECT_DIR$/../../src/flutter/.pub-cache/hosted/pub.dartlang.org/dio-5.3.3/lib" />
