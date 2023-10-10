@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:projeto_dio_flutter/model/tarefas_back4app_model.dart';
 
 class TarefasBack4AppApi{
+
   Future<TarefasBack4AppModel> getAllByConcluido(bool concluido) async{
     var dio = Dio();
     dio.options.headers["X-Parse-Application-Id"] = "dkQpjL9UrLtmVQGCSu3MDXgq4ZiPQzY9HbrjXBSq";

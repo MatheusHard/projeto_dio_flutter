@@ -5,6 +5,7 @@ import 'package:package_info_plus/package_info_plus.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
 import 'package:projeto_dio_flutter/pages/auto_size_page.dart';
 import 'package:projeto_dio_flutter/pages/brasil_fields_page.dart';
+import 'package:projeto_dio_flutter/pages/camera_page.dart';
 import 'package:projeto_dio_flutter/pages/cep_page.dart';
 import 'package:projeto_dio_flutter/pages/configuracoes.dart';
 import 'package:projeto_dio_flutter/pages/hardware_page.dart';
@@ -369,7 +370,23 @@ class _DrawerCustomState extends State<DrawerCustom> {
                   ],)
             ),
           ),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+            child: InkWell(
+                onTap: () async{
+                  Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (BuildContext bd)=> const CameraPage()));
 
+                },
+                child: Row(
+                  children:  const[
+                    FaIcon(FontAwesomeIcons.cameraRetro),
+                    SizedBox(width: 20),
+                    Text("CAMERA"),
+                  ],)
+            ),
+          ),
     const Divider(),
           Container(
             width: double.infinity,
